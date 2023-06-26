@@ -27,6 +27,7 @@ print("""
 
 """)
 #-----------------------------------------------------------------------------------------------------------------------
+print("Please Enter The Chrome Driver According To Your Browser Version")
 # Set the path to the Chrome driver executable
 chrome_driver_path = input('D:\pycharm\scrap project\chromedriver.exe:-')
 
