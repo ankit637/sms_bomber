@@ -1,3 +1,2 @@
-sleep
 python-dotenv
 selenium
