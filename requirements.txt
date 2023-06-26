@@ -1,0 +1,3 @@
+sleep
+python-dotenv
+selenium
