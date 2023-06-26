@@ -12,7 +12,8 @@ load_dotenv()
 # Configure Firefox options
 firefox_options = Options()
 firefox_options.headless = True  # Run Firefox in headless mode
-#---------------------------------------------------------------------------------
+firefox_options.binary_location = '/usr/bin/firefox'  # Set the path to the Firefox binary
+
 print("""
     @@@@@@@@@   @        @  @     @  @@@@@@@@@@@@@  @@@@@@@@@@@@@@@
     @       @   @ @      @  @    @         @               @
@@ -27,17 +28,17 @@ print("""
 """)
 
 # Set the path to the geckodriver executable (Firefox driver)
-print("Please Enter FireFox Driver According to you browser Version")
-geckodriver_path = input('path/to/geckodriver:-')
+print("Please enter the path to the geckodriver executable:")
+geckodriver_path = input('Path/to/geckodriver: ')
 
 USERNAME = int(input("Enter the number without (+91): "))
-iterations = int(input("Enter the number of times to run the code: "))
+iterations = int(input("Enter the number of send sms: "))
 delay = float(input("Enter the delay between iterations (in seconds): "))
 
 # Run the code for the specified number of iterations
 for _ in range(iterations):
     # Initialize Firefox driver with options
-    driver = webdriver.Firefox(executable_path=geckodriver_path, options=firefox_options)
+    driver = webdriver.Firefox(options=firefox_options)
 
     insta_url = 'https://www.pgrkam.com/signin-with-otp'
     driver.get(insta_url)
